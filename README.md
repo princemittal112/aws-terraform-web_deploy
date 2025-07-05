@@ -31,10 +31,11 @@ nginx_website_using-terraform/
 ---
 
 ## What is a Terraform Backend?
+
 A backend is where Terraform stores its state file. It is responsible for:
-Keeping track of resources Terraform creates
-Allowing multiple people to work on the same infrastructure
-Managing state file locking to avoid corruption
+- Keeping track of resources Terraform creates
+- Allowing multiple people to work on the same infrastructure
+- Managing state file locking to avoid corruption
 
 <img width="438" alt="Screenshot 2025-07-05 at 1 19 47 PM" src="https://github.com/user-attachments/assets/a26da00a-c39c-449e-8de8-21d466e81eb4" />
 
