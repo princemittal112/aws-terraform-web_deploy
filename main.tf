@@ -163,18 +163,6 @@ resource "aws_instance" "nginx_ec2" {
   key_name               = "princemittal" 
   vpc_security_group_ids      = [aws_security_group.ec2_sg.id]
 
-  user_data = <<-EOF
-              #!/bin/bash
-              sudo yum update -y
-              sudo dnf install nginx -y
-              sudo systemctl start nginx
-              sudo systemctl enable nginx
-            #   echo "<html>
-            #   <head><title>Terraform NGINX</title></head>
-            #   <body><h1 style='color:blue;'>🚀 EC2 + NGINX deployed via Terraform!</h1></body>
-            #   </html>" > /usr/share/nginx/html/index.html
-            EOF
-
   tags = {
     Name = "nginx_ec2_instance"
   }
