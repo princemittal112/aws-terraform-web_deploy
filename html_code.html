@@ -1,0 +1,59 @@
+sudo tee /usr/share/nginx/html/index.html > /dev/null <<EOF
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terraform Deployed EC2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1abc9c, #16a085);
+      margin: 0;
+      padding: 0;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .container {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2em;
+      margin-top: 0;
+    }
+    .tagline {
+      font-size: 1.5em;
+      color: #ecf0f1;
+      margin-top: 20px;
+    }
+    .emoji {
+      font-size: 2.5em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="emoji">🚀🌍</div>
+    <h1>Welcome to Terraform NGINX</h1>
+    <p>This EC2 instance was launched and configured using Terraform.</p>
+    <div class="tagline">Powered by AWS, Managed by DevOps 💡</div>
+  </div>
+</body>
+</html>
+EOF
+
+<!-- then restart nginx using : 
+
+sudo systemctl restart nginx -->
