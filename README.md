@@ -43,16 +43,7 @@ A backend is where Terraform stores its state file. It is responsible for:
 
 ## 🔁 Backend Configuration (terraform block)
 
-terraform {
-  backend "s3" {
-    bucket         = "my-terraform-state-bucket-prince"
-    key            = "ec2/nginx-instance.tfstate"
-    region         = "us-east-1"
-    encrypt        = true
-    dynamodb_table = "terraform-lock-table-prince"
-  }
-}
-⚠️ These resources must be created first via a bootstrap script, as Terraform needs them before init.
+⚠️ These resources must be created first on aws, as Terraform needs them before init. So, we go to aws console and create an s3 bucket named "my-terraform-state-bucket-prince" and a dynamodb_table named "terraform-lock-table-prince"
 
 ---
 
